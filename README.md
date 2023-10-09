@@ -19,8 +19,8 @@
 | user           | references | null: false, foreign_key: true |
 | title          | string | |
 | content        | text |  |
-| category_id    | string | null: false |
-| subcategory_id | string | null: false |
+| category_id    | integer | null: false |
+| subcategory_id | integer | null: false |
 
 
 ### Association
