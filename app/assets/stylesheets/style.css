@@ -36,7 +36,6 @@ a {
 
 .header {
   background-color: #ffffff;
-  margin-bottom: 48px;
   padding: 15px 0;
   font-family: "Nico Moji";
 }
@@ -84,8 +83,10 @@ a {
 
 /* メイン */
 .greeting{
+  font-family: "Nico Moji";
   margin-bottom: 20px;
   font-size: 2em;
+  margin-left: 20px;
 }
 .greeting__link{
   text-decoration: underline;
@@ -125,4 +126,20 @@ a {
   text-decoration: underline;
 }
 
+
+.purchase-btn {
+  width: 180px;
+  text-align: center;
+  bottom: 32px;
+  right: 25px;
+  position: fixed;
+}
+
+.purchase-btn-text {
+  font-family: "Nico Moji";
+  color: #ff8e1d;
+  display: block;
+  font-size: 23px;
+  text-decoration: none;
+}
 
