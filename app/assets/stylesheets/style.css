@@ -34,6 +34,8 @@ a {
   color: #3b4043;
 }
 
+/* ヘッダー */
+
 .header {
   background-color: #ffffff;
   padding: 15px 0;
@@ -48,9 +50,9 @@ a {
 .logo {
   width: 180px;
 }
-.nav__btn{
+.nav__btn {
   display: inline-block;
-  padding: 0.5em 1em;
+  padding: 0.4em 1em;
   font-size: 1.5em;
   color: #ff8e1d;
   text-decoration: none;
@@ -64,7 +66,16 @@ a {
   color: #fff;
   background: #ff8e1d;
 }
+.nav__user{
+  display: inline-block;
+  font-size: 1.5em;
+  color: #ff8e1d;
+  text-decoration: none;
+  user-select: none;
+  transition: 0.4s ease;
+  margin: 1em 0.5em;
 
+}
 
 /* フッター */
 
@@ -143,3 +154,41 @@ a {
   text-decoration: none;
 }
 
+/* フォーム周り */
+.form__wrapper{
+  display: grid;
+  place-items: center;
+
+}
+
+.form__text {
+  width: 50%;
+}
+
+.field{
+  margin: 10px 0;
+  font-size: 1.5em;
+
+}
+
+.actions{
+  margin: 40px 0;
+}
+
+.form__btn{
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  font-size: 1.2em;
+  color: #ff8e1d;
+  text-decoration: none;
+  user-select: none;
+  background: #ffffff;
+  border: 3px #ff8e1d solid;
+  border-radius: 3px;
+  transition: 0.2s ease;
+}
+
+.form__btn:hover{
+  color: #fff;
+  background: #ff8e1d;
+}
