@@ -192,3 +192,8 @@ a {
   color: #fff;
   background: #ff8e1d;
 }
+
+.categoryーselect{
+  height: 30px;
+  width: 250px;
+}
