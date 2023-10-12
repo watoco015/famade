@@ -1,8 +1,8 @@
 <div class="card">
   <div class="card__body">
     <div class="card__summary">
-      <%= link_to "by #{art.user.nickname}" ,"#" %>
+      <%= link_to "by #{art.user.nickname}" , root_path %>
     </div>
-      <%= link_to image_tag(art.image, class: :card__img ), "#"%>
+        <%= image_tag(art.image, class: :card__img) %>
   </div>
 </div>
