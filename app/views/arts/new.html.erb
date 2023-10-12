@@ -2,39 +2,8 @@
   <div class="inner">
     <div class="form__wrapper">
       <h2 class="page-heading">作品投稿</h2>
-
-      <%= form_with model: @art, local: true do |f|%>
-        <div class="field">
-          <%= f.label :image, "作品の画像" %><br />
-          <%= f.file_field :image, id:"art_image" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :title, "作品タイトル" %><br />
-          <%= f.text_field :title, id:"art_title" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :content, "作品内容" %><br />
-          <%= f.text_area :content, class: :form__text, id:"art_content" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :category_id, "カテゴリー" %><br />
-          <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"categoryーselect"}) %>
-        </div>
-
-        <div class="field">
-          <%= f.label :subcategory_id, "サブカテゴリー" %><br />
-          <%= f.collection_select(:subcategory_id, Subcategory.all, :id, :name, {}, {class:"categoryーselect"}) %>
-
-        </div>
-
-
-        <div class="actions">
-          <%= f.submit "保存する", class: :form__btn  %>
-        </div>
-      <% end %>
+      
+          <%= render partial: "form" %>
 
     </div>
   </div>
