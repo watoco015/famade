@@ -182,3 +182,8 @@ a {
   height: 30px;
   width: 250px;
 }
+.preview{
+  margin: 5px 10px 5px 0;
+  height: 100px;
+  width: 150px;
+}
