@@ -5,4 +5,8 @@ class User < ApplicationRecord
 
          validates :nickname, presence: true
 
+  has_many :arts
+  has_many :comments
+  has_many :favorites
+
 end
