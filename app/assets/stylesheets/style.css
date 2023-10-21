@@ -18,6 +18,10 @@ div {
 body {
   font-family: "M PLUS Rounded 1c"; 
   color: #3b4043;
+  background-image: url("https://img.freepik.com/free-photo/paperboard-yellow-texture_95678-83.jpg?size=626&ext=jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 li {
@@ -37,7 +41,6 @@ a {
 /* ヘッダー */
 
 .header {
-  background-color: #ffffff;
   padding: 15px 0;
   font-family: "Nico Moji";
 }
@@ -48,59 +51,64 @@ a {
   justify-content: space-between;
 }
 .logo {
-  width: 180px;
+  width: 200px;
+}
+.nav{
+  align-items: center;
+}
+.nav__right{
+  margin-right: 20px;
 }
 .nav__btn {
   display: inline-block;
-  padding: 0.4em 1em;
-  font-size: 1.5em;
-  color: #ff8e1d;
+  padding: 10px 10px;
+  font-size: 22px;
+  color: #3c3c3c;
   text-decoration: none;
   user-select: none;
-  border: 3px #ff8e1d solid;
+  border: 3px #3c3c3c solid;
   border-radius: 2px;
   transition: 0.4s ease;
-  margin: 1em 0.5em;
 }
 .nav__btn:hover{
   color: #fff;
-  background: #ff8e1d;
+  background: #3c3c3c;
 }
-.nav__user{
+.nav__btn_f{
   display: inline-block;
-  font-size: 1.5em;
-  color: #ff8e1d;
+  padding: 8px 8px;
+  font-size: 22px;
+  color: #3c3c3c;
   text-decoration: none;
   user-select: none;
+  border-radius: 2px;
   transition: 0.4s ease;
-  margin: 1em 0.5em;
-
+}
+.nav__btn_f:hover{
+  color: #fff;
+  background: #3c3c3c;
 }
 
 /* フッター */
 
-.footer {
-  width: 100vw;
-  position: absolute;
-  bottom: 0;
-  background-color: #999;
-}
-.copyright {
-  text-align: center;
-  color: #fff;
-  font-size: 15px;
-}
 
 
 /* メイン */
 .greeting{
-  font-family: "Nico Moji";
   margin-bottom: 5px;
-  font-size: 2em;
-  margin-left: 20px;
+  font-size: 1.2em;
+  text-align: center;
+  position: relative;
+  padding: 0.3em;
 }
-.greeting__link{
-  text-decoration: underline;
+h1:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 7px;
+  background: repeating-linear-gradient(-45deg, rgb(255, 153, 36), rgb(255, 177, 88) 2px, rgb(255, 217, 188) 2px, white 4px);
 }
 .page-heading {
   font-size: 30px;
@@ -109,35 +117,19 @@ a {
 .card__wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   min-height: calc(100vh - 161px);
 }
 .card {
-  width: calc((100% - 50px) / 4);
+  width: calc((100% - 20%) / 2);
   margin: 20px 40px ;
 }
-.card__summary {
+.card__user {
   font-size: 28px;
-  color: #020202;
+  color: #3c3c3c;
 }
 
-/* 投稿ボタン */
-.purchase-btn {
-  width: 180px;
-  text-align: center;
-  bottom: 32px;
-  right: 25px;
-  position: fixed;
-}
-
-.purchase-btn-text {
-  font-family: "Nico Moji";
-  color: #ff8e1d;
-  display: block;
-  font-size: 23px;
-  text-decoration: none;
-}
 
 /* フォーム周り */
 .form__wrapper{
@@ -145,37 +137,34 @@ a {
   place-items: center;
 
 }
-
 .form__text {
   width: 50%;
 }
-
 .field{
   margin: 10px 0;
   font-size: 1.5em;
-
 }
-
 .actions{
   margin: 40px 0;
 }
-
 .form__btn{
   display: inline-block;
   padding: 0.4em 0.8em;
   font-size: 1.2em;
-  color: #ff8e1d;
+  color: #fff;
+  background-color: #3c3c3c;
   text-decoration: none;
   user-select: none;
-  background: #ffffff;
-  border: 3px #ff8e1d solid;
+  border: 3px #3c3c3c solid;
   border-radius: 3px;
   transition: 0.2s ease;
 }
 
 .form__btn:hover{
   color: #fff;
-  background: #ff8e1d;
+  background: #887866;
+  border: 3px #887866 solid;
+
 }
 
 .categoryーselect{

@@ -1,13 +1,12 @@
 <main class="main">
   <div class="inner">
-      <div class="greeting">こんにちは ゲストさん</div>
+      <div class="greeting">
+      <h1>NEW ITEM</h1>
+      </div>
+
         <div class="card__wrapper">
         <%= render partial: 'art', collection: @arts %>
         </div>
 
   </div>
 </main>
- <%= link_to(new_art_path, class: 'purchase-btn') do %>
-    <span class='purchase-btn-text'>とうこう</span>
-    <%= image_tag 'camera.png' , size: '80x80' ,class: "purchase-btn-icon" %>
-  <% end %>
