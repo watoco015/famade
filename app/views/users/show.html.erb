@@ -1,0 +1,15 @@
+<div class="main">
+  <div class="inner">
+    <div class="user__wrapper">
+      <h2 class="page-heading">
+        <%= "#{@user.nickname}さんの作品" %>
+      </h2>
+      <div class="card__wrapper">
+        <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
+        <% @arts.each do |art| %>
+          <%= render partial: "arts/art", locals: { art: art } %>
+       <% end %>
+      </div>
+    </div>
+  </div>
+</div>
