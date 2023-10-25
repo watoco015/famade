@@ -1,8 +1,24 @@
 <div class="card">
   <div class="card__body">
     <div class="card__summary">
-      <%= link_to "by #{art.user.nickname}" , root_path, class: :card__user %>
-      <%= image_tag(art.image, class: :card__img) %>
+      <div class="more">
+        <%= link_to "by #{art.user.nickname}" , root_path, class: :card__user %>
+        <ul class="more_list">
+          <li>
+            <%= link_to '詳細', root_path %>
+          </li>
+          <% if user_signed_in? && current_user.id == art.user_id %>
+          <li>
+            <%= link_to '編集', root_path %>
+          </li>
+          <li>
+            <%= link_to '削除', root_path %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+            <%= image_tag(art.image, class: :card__img) %>
+
     </div>
   </div>
 </div>

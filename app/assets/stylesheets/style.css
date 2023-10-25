@@ -128,6 +128,30 @@ h1 {
   color: #3c3c3c;
   
 }
+.more {
+  margin-bottom: 10px;
+  position : relative;
+}
+.card__summary:hover .more_list{
+  display: inline;
+}
+.more_list{
+  position : absolute;
+  display: none;
+  margin-top: 5px;
+  padding: 5px;
+  color: #3c3c3c;
+  background-color: #deccab;
+  border-radius: 5px;
+  width:70px;
+  top: 50px;
+  right: 5px;
+  font-size:18px;
+  text-align: center;
+}
+li:hover{
+  text-decoration: underline;
+}
 
 
 /* フォーム周り */

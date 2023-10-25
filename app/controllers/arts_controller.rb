@@ -18,6 +18,10 @@ class ArtsController < ApplicationController
     end
   end
 
+  def show
+  
+  end
+
 
   private
   def art_params
