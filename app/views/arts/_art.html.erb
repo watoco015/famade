@@ -5,7 +5,7 @@
         <%= link_to "by #{art.user.nickname}" , root_path, class: :card__user %>
         <ul class="more_list">
           <li>
-            <%= link_to '詳細', root_path %>
+            <%= link_to '詳細', art_path(art.id) %>
           </li>
           <% if user_signed_in? && current_user.id == art.user_id %>
           <li>
