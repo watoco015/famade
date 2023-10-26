@@ -218,6 +218,8 @@ li:hover{
 }
 .art__images {
   width: calc(100% - 45%);
+  min-width: calc(100vw - 55%);
+  margin-left: 20px;
 }
 .art__edit{
   margin-top: 20px;
