@@ -1,35 +1,40 @@
 <main class="main">
   <div class="inner">
-    <div class="__wrapper">
-      <p class="art__hedding">
-        <%= @art.title %>
-      </p>
-      <%= link_to "by #{@art.user.nickname}", user_path(@art.user), class: :art__user %>
-
-      <% if user_signed_in? && current_user.id == @art.user_id %>
-        <div class="art__manage">
-          <%= link_to "編集する", edit_art_path(@art.id), class: :art__btn %>
-          <%= link_to "削除する", art_path(@art.id), data: { turbo_method: :delete } , class: :art__btn %>
+    <div class="art__wrapper">
+      <div class="art__images">
+        <%= image_tag @art.image ,class: :art__image %>
+      
+        <div class="art__edit">
+          <% if user_signed_in? && current_user.id == @art.user_id %>
+          <div class="art__manage">
+            <%= link_to "　編集する　", edit_art_path(@art.id), class: :art__btn %>
+            <%= link_to "　削除する　", art_path(@art.id), data: { turbo_method: :delete } , class: :art__btn %>
+          </div>
+              <% end %>
         </div>
-      <% end %>
-      <div class="art__image">
-        <%= image_tag @art.image %>
       </div>
+
       <div class="art__body">
         <div class="art__detail">
-          <p class="detail__title">カテゴリー</p>
-          <p class="detail__message">
-            <%= @art.category.name %>
+          <p class="art__hedding">
+            <%= @art.title %>
           </p>
         </div>
-        <div class="art__detail">
-          <p class="detail__title">サブカテゴリー</p>
-          <p class="detail__message">
-            <%= @art.subcategory.name %>
-          </p>
+            <%= link_to "　by #{@art.user.nickname}", user_path(@art.user),class: :detail__message %>
+
+        <div class= "art__detail_cate">
+          <div class="art__detail">
+            <p class="detail__cate">
+              <%= @art.category.name %>
+            </p>
+          </div>
+          <div class="art__detail">
+            <p class="detail__cate">
+              <%= @art.subcategory.name %>
+            </p>
+          </div>
         </div>
         <div class="art__detail">
-          <p class="detail__title">作品内容</p>
           <p class="detail__message">
             <%= @art.content %>
           </p>

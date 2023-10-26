@@ -2,7 +2,7 @@
   <div class="card__body">
     <div class="card__summary">
       <div class="more">
-        <%= link_to "by #{art.user.nickname}" , root_path, class: :card__user %>
+        <%= link_to "by #{art.user.nickname}" , user_path(art.user), class: :card__user %>
         <ul class="more_list">
           <li>
             <%= link_to '詳細', art_path(art.id) %>
