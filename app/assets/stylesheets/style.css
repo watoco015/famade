@@ -126,7 +126,33 @@ h1 {
 .card__user {
   font-size: 28px;
   color: #3c3c3c;
-  
+}
+.card__user:hover{
+  text-decoration: underline;
+}
+.more {
+  margin-bottom: 10px;
+  position : relative;
+}
+.card__summary:hover .more_list{
+  display: inline;
+}
+.more_list{
+  position : absolute;
+  display: none;
+  margin-top: 5px;
+  padding: 5px;
+  color: #3c3c3c;
+  background-color: #deccab;
+  border-radius: 5px;
+  width:70px;
+  top: 50px;
+  right: 5px;
+  font-size:18px;
+  text-align: center;
+}
+li:hover{
+  text-decoration: underline;
 }
 
 
@@ -183,4 +209,45 @@ h1 {
 .page-heading{
   text-align: center;
 
+}
+/* 詳細ページ */
+
+.art__wrapper{
+  min-height: calc(100vh - 161px);
+  display: flex;
+}
+.art__images {
+  width: calc(100% - 45%);
+  min-width: calc(100vw - 55%);
+  margin-left: 20px;
+}
+.art__edit{
+  margin-top: 20px;
+}
+.art__btn:hover{
+  text-decoration: underline;
+}
+.art__body{
+  margin-left: 120px;
+  text-align: start;
+}
+.art__detail{
+  margin-top: 50px;
+}
+.art__detail_cate{
+  display: flex;
+}
+.art__hedding{
+  font-weight: 800;
+  font-size: 40px;
+}
+.detail__cate{
+  font-size: 20px;
+  padding: 3px 5px;
+  margin-right: 5px;
+  border: 2px #3c3c3c solid;
+  border-radius: 5px;
+}
+.detail__message{
+  font-size: 23px;
 }
