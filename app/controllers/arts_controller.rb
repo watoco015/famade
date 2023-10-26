@@ -2,7 +2,7 @@ class ArtsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    @arts = Art.all
+    @arts = Art.all.order("created_at DESC")
   end
 
   def new
@@ -22,6 +22,30 @@ class ArtsController < ApplicationController
     @art = Art.find(params[:id])
   end
 
+  def edit
+    @art = Art.find(params[:id])
+      unless @art.user_id == current_user.id
+        redirect_to action: :index
+      end
+  end
+
+  def update
+    @art = Art.find(params[:id])
+  
+    if @art
+      if @art.update(art_params)
+        redirect_to art_path(@art)
+      else
+        render :edit, status: :unprocessable_entity
+      end
+    end
+  end
+
+  def destroy
+    art = Art.find(params[:id])
+    art.destroy
+    redirect_to root_path
+  end
 
   private
   def art_params
