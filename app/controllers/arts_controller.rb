@@ -20,6 +20,8 @@ class ArtsController < ApplicationController
 
   def show
     @art = Art.find(params[:id])
+    @comment = Comment.new
+    @comments = @art.comments.includes(:user)
   end
 
   def edit
