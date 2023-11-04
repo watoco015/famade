@@ -19,9 +19,11 @@
           <p class="art__hedding">
             <%= @art.title %>
           </p>
+          <div id="favorite_button">
+              <%= render "favorites/favorite", art: @art %>
+          </div>
         </div>
             <%= link_to "　by #{@art.user.nickname}", user_path(@art.user),class: :detail__message %>
-
         <div class= "art__detail_cate">
           <div class="art__detail">
             <p class="detail__cate">
