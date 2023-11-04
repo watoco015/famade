@@ -1,6 +1,13 @@
 # アプリケーション名
 faMde
 
+# URL
+https://famade.onrender.com
+
+# テスト用アカウント
+メールアドレス：test@com
+パスワード：test12
+
 # アプリケーション概要
 家族間で作ったハンドメイド作品、料理のレシピの共有ができる
 
@@ -26,10 +33,13 @@ https://docs.google.com/spreadsheets/d/1ev-SR6nSbgj1VSErYUReCavJ2lQZjOIbdHgRL82l
 [![Image from Gyazo](https://i.gyazo.com/dde3685ca4daed6dc9c4f515448fd77a.png)](https://gyazo.com/dde3685ca4daed6dc9c4f515448fd77a)
 
 # 開発環境
-HTML, CSS
+HTML CSS
 JavaScript
 Ruby
 Ruby on Rails
 MySQL
 VScode
 GitHub
+
+# 実装予定の機能
+コメント削除機能、トップページ参考画像挿入、投稿時の画像複数選択
