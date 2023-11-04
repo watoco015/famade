@@ -240,6 +240,7 @@ textarea {
   text-align: start;
 }
 .art__detail{
+  display: flex;
   margin-top: 50px;
 }
 .art__detail_cate{
@@ -277,5 +278,9 @@ textarea {
 .comments_lists{
   margin-bottom: 20px;
 }
-.comment_user{
+
+/* お気に入り */
+.fa-favorite{
+  margin-left: 50px;
+  vertical-align: bottom;
 }
