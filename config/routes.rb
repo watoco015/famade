@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "arts#index"
   resources :arts do
     resources :comments, only: :create
+    resource  :favorites, only: [:create, :destroy]
   end
   resources :users, only: :show
 end
