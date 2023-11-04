@@ -8,5 +8,5 @@ class User < ApplicationRecord
   has_many :arts
   has_many :comments
   has_many :favorites
-
+  has_many :favorite_arts, through: :favorites, source: :art
 end
