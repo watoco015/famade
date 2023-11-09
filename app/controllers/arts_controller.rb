@@ -1,5 +1,6 @@
 class ArtsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_art, only: [:show, :edit, :update]
 
   def index
     @arts = Art.all.order("created_at DESC")
@@ -19,20 +20,17 @@ class ArtsController < ApplicationController
   end
 
   def show
-    @art = Art.find(params[:id])
     @comment = Comment.new
     @comments = @art.comments.includes(:user)
   end
 
   def edit
-    @art = Art.find(params[:id])
       unless @art.user_id == current_user.id
         redirect_to action: :index
       end
   end
 
   def update
-    @art = Art.find(params[:id])
   
     if @art
       if @art.update(art_params)
@@ -54,4 +52,7 @@ class ArtsController < ApplicationController
     params.require(:art).permit(:title, :content, :category_id, :subcategory_id, :image).merge(user_id: current_user.id)
   end
 
+  def set_art
+    @art = Art.find(params[:id])
+  end
 end
